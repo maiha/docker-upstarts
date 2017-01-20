@@ -1,0 +1,13 @@
+openldap-server:
+  container_name: openldap-server
+  image: osixia/openldap:1.1.7
+  ports:
+   - "389:389"
+  volumes:
+   - /etc/localtime:/etc/localtime:ro
+   - $PWD:/mnt
+  environment:
+    LDAP_ORGANISATION: "example"
+    LDAP_DOMAIN: "example.com"
+    LDAP_ADMIN_PASSWORD: "password"
+  restart: unless-stopped
