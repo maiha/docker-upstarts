@@ -8,6 +8,6 @@ openldap-server:
    - $PWD:/mnt
   environment:
     LDAP_ORGANISATION: "example"
-    LDAP_DOMAIN: "example.com"
-    LDAP_ADMIN_PASSWORD: "password"
+    LDAP_DOMAIN: "example.org"
+    LDAP_ADMIN_PASSWORD: "admin"
   restart: unless-stopped
